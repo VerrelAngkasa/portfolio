@@ -39,28 +39,25 @@ const workExperienceData = [
    Add a new institution by pushing an object with a `positions` array. */
 const organizationData = [
   {
-    institution: "Majelis Perwakilan Mahasiswa Universitas Pelita Harapan",
-    period: "Aug 2024 – Aug 2025 · 1 year 1 month",
+    institution: "Universitas Pelita Harapan",
+    period: "Aug 2023 – Aug 2025 · 2 year",
     positions: [
       {
-        title: "Member of Internal Affairs Commission — Student Representative Board, UPH Medan Campus 2024/2025",
+        title: "Student Representative Board — Member of Internal Affairs Commission 2024/2025",
         period: "Aug 2024 – Aug 2025",
         bullets: [
-          "Advisor to the Student Association of Information Systems Study Program",
-          "Advisor to Ambassadors of UPH Medan Campus",
+          "Advisor to the Student Association of Information Systems Study Program 2024/2025",
+          "Advisor to Ambassadors of UPH Medan Campus 2024",
           "Monitored workflows and screened proposals for related student organizations"
         ]
-      }
-    ]
-  },
-  {
-    institution: "Universitas Pelita Harapan",
-    period: "Aug 2023 – Aug 2024 · 1 year 1 month",
-    positions: [
+      },
       {
-        title: "Ambassador of UPH Medan Campus 2023",
-        period: "Aug 2023 – Aug 2024",
-        bullets: ["Student representative of UPH Medan Campus 2023"]
+        title: "Project Manager — Ambassadors of UPH Medan Campus 2024",
+        period: "Nov 2023 – Apr 2024 · 6 months",
+        bullets: [
+          "Led the project end-to-end: event organizing, design, and training divisions",
+          "Directed a team of 30+ committee members"
+        ]
       },
       {
         title: "Head of Internal Relations Department — Student Association of Information Systems",
@@ -68,12 +65,9 @@ const organizationData = [
         bullets: ["Managed internal events within the UPH Medan Campus"]
       },
       {
-        title: "Project Manager — Ambassadors of UPH Medan Campus 2024",
-        period: "Nov 2023 – Apr 2024 · 6 months",
-        bullets: [
-          "Led the program end-to-end: event organizing, design, and training divisions",
-          "Directed a team of 30+ committee members"
-        ]
+        title: "Ambassador of UPH Medan Campus 2023",
+        period: "Aug 2023 – Aug 2024",
+        bullets: ["Student representative of UPH Medan Campus 2023"]
       }
     ]
   }
