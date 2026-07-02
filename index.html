@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verrel Angkasa — DevSecOps Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav>
+  <a class="nav-logo" href="#top">verrel.dev</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">menu ▾</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#posts">Posts</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================================
+     LANDING / HERO
+     ============================================================ -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="avatar" id="avatarEl"><img src="assets/profile.jpeg" alt="VA" class="avatar-img"></div>
+    <p class="hero-role">$ whoami</p>
+    <h1 class="hero-name">Verrel Angkasa<span class="cursor">_</span></h1>
+    <p class="hero-bio prose">
+      Ensuring continuous integration and delivery for the systems behind one of Indonesia's largest hospital group — bridging DevOps
+      practice with security thinking. Cloud-trained through Google's Bangkit Academy and AWS
+      Certified Solutions Architect Associate. Always have a room to learn and grow.
+    </p>
+    <div class="status-line">
+      <span class="pulse-dot"></span>
+      Medan, Indonesia — open to new opportunities
+    </div>
+    <div class="hero-actions">
+      <a href="#experience" class="btn btn-primary">See my work</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+    <div class="hero-chips">
+      <span class="chip">1.5+ yrs in DevOps</span>
+      <span class="chip">AWS Certified</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     WORK EXPERIENCE
+     ============================================================ -->
+<section id="experience" class="fade-in">
+  <p class="eyebrow">// career</p>
+  <h2 class="section-title">Work experience</h2>
+  <div class="timeline" id="workExperienceList"></div>
+</section>
+
+<!-- ============================================================
+     ORGANIZATION EXPERIENCE
+     ============================================================ -->
+<section class="alt-bg fade-in">
+  <div class="inner">
+    <p class="eyebrow">// leadership</p>
+    <h2 class="section-title">Organization experience</h2>
+    <div class="org-list" id="organizationList"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SKILLS — two independent marquees
+     ============================================================ -->
+<section id="skills" class="fade-in">
+  <p class="eyebrow">// toolkit</p>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-dual">
+    <div>
+      <div class="skill-group-label">Technical skills</div>
+      <div class="skill-marquee"><div class="skill-track" id="techSkillTrack"></div></div>
+    </div>
+    <div>
+      <div class="skill-group-label">Soft skills</div>
+      <div class="skill-marquee"><div class="skill-track reverse" id="softSkillTrack"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EDUCATION
+     ============================================================ -->
+<section id="education" class="alt-bg fade-in">
+  <div class="inner">
+    <p class="eyebrow">// academic background</p>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-panel" id="educationPanel"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROJECTS
+     ============================================================ -->
+<section id="projects" class="fade-in">
+  <p class="eyebrow">// applied work</p>
+  <h2 class="section-title">Projects</h2>
+  <div class="project-grid" id="projectGrid"></div>
+</section>
+
+<!-- ============================================================
+     CERTIFICATIONS
+     ============================================================ -->
+<section id="certifications" class="alt-bg fade-in">
+  <div class="inner">
+    <p class="eyebrow">// credentials</p>
+    <h2 class="section-title">Certifications</h2>
+    <div class="certs-grid" id="certsGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     POSTS
+     ============================================================ -->
+<section id="posts" class="fade-in">
+  <p class="eyebrow">// writing</p>
+  <h2 class="section-title">Posts</h2>
+  <div class="posts-grid" id="postsGrid"></div>
+</section>
+
+<!-- ============================================================
+     CONTACT — simple list, no cards
+     ============================================================ -->
+<section id="contact" class="alt-bg fade-in">
+  <div class="inner">
+    <p class="eyebrow">// get in touch</p>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-list" id="contactList"></div>
+  </div>
+</section>
+
+<footer>
+  <p>Verrel Angkasa © 2026 — built with Claude</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
