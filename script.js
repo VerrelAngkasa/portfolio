@@ -40,7 +40,7 @@ const workExperienceData = [
 const organizationData = [
   {
     institution: "Universitas Pelita Harapan",
-    period: "Aug 2023 – Aug 2025 · 2 year",
+    period: "Aug 2023 – Aug 2025 · 2 years",
     positions: [
       {
         title: "Student Representative Board — Member of Internal Affairs Commission 2024/2025",
@@ -110,6 +110,7 @@ const educationData = {
   institution: "Universitas Pelita Harapan (UPH)",
   degree: "Bachelor of Computer Science (Information Systems)",
   period: "August 2022 – November 2025",
+  gradYear: "2026",
   gpa: "3.69",
   finalProject: "Financial Information System Development and Implementation Based on Workflow Automation for MSMEs Using n8n: A Case Study of Marvin's Chicken Wholesale"
 };
@@ -134,6 +135,8 @@ const projectsData = [
    - logoUrl: optional image URL. If omitted, the short "icon" text is shown.
    - issued / expires: optional date strings, e.g. "2025-03-01". Leave expires
      empty for certificates that don't expire — shows "No expiry" instead.
+   - link: optional URL to the credential (e.g. your Credly badge page). If set,
+     a "View credential" link appears on the card; leave it "" to hide it.
    Dates/logos weren't in your CV, so they're blank — fill in real values
    whenever you have them. */
 const certificationsData = [
@@ -143,7 +146,7 @@ const certificationsData = [
     logoUrl: "https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
     issued: "6/16/2026",
     expires: "6/16/2029",
-    link: ""
+    link: "https://www.credly.com/badges/0596378a-935c-4201-a00e-03841007adf3"
   }
   // { name: "Prompt Design in Vertex AI", issuer: "Google Cloud", icon: "GCP", logoUrl: null, issued: "", expires: "" },
 ];
@@ -281,7 +284,7 @@ function renderEducation(){
           <div class="edu-stat-label">Honor</div>
         </div>
         <div>
-          <div class="edu-stat-num">2026</div>
+          <div class="edu-stat-num">${e.gradYear}</div>
           <div class="edu-stat-label">Graduation</div>
         </div>
       </div>
@@ -333,6 +336,7 @@ function renderCertifications(){
         <div class="cert-name">${c.name}</div>
         <div class="cert-issuer">${c.issuer}${issuedLabel ? ` · issued ${issuedLabel}` : ''}</div>
         <div class="cert-meta"><span class="cert-status ${status.cls}">${status.label}</span></div>
+        ${c.link ? `<a class="cert-link" href="${c.link}" target="_blank" rel="noopener">View credential ↗</a>` : ''}
       </div>
     </div>`;
   }).join('');

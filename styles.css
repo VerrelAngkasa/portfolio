@@ -146,14 +146,29 @@ section.alt-bg > .inner{ max-width:var(--max-width); margin:0 auto; }
 }
 .hero-inner{ max-width:var(--max-width); margin:0 auto; width:100%; position:relative; }
 
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:3rem;
+  align-items:center;
+}
+.hero-photo{ justify-self:end; }
+
 .avatar{
-  width:150px; height:150px; border-radius:50%;
+  width:220px; height:220px; border-radius:50%;
   background:var(--surface); border:1px solid var(--border-strong);
   color:var(--green-300); display:flex; align-items:center; justify-content:center;
-  font-weight:700; font-size:1.9rem; margin-bottom:1.75rem;
+  font-weight:700; font-size:3.6rem; flex-shrink:0; overflow:hidden;
 }
 .avatar-img{
-  width:150px; height:150px; border-radius:50%; object-fit:fill;
+  width:220px; height:220px; border-radius:50%; object-fit:cover;
+}
+
+@media (max-width:860px){
+  .hero-grid{ grid-template-columns:1fr; }
+  .hero-photo{ justify-self:center; }
+  .avatar, .avatar-img{ width:160px; height:160px; }
+  .avatar{ font-size:2.6rem; }
 }
 .hero-role{ font-size:13.5px; color:var(--green-500); margin-bottom:0.9rem; letter-spacing:0.02em; }
 .hero-name{
@@ -352,6 +367,11 @@ section.alt-bg > .inner{ max-width:var(--max-width); margin:0 auto; }
 .cert-status.valid{ background:rgba(34,197,94,0.1); color:var(--green-300); }
 .cert-status.expired{ background:rgba(148,163,184,0.1); color:var(--muted); }
 .cert-status.none{ background:rgba(255,255,255,0.04); color:var(--muted-2); }
+.cert-link{
+  display:inline-flex; align-items:center; gap:0.3rem; margin-top:0.7rem;
+  font-size:12px; font-weight:600; color:var(--green-300); text-decoration:none;
+}
+.cert-link:hover{ text-decoration:underline; }
 
 /* ============================================================
    POSTS
