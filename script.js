@@ -10,25 +10,22 @@ const workExperienceData = [
     role: "DevSecOps Engineer",
     period: "Oct 2025 – Present · 10 months",
     status: "current",
-    desc: "Securing critical healthcare infrastructure and integrating security practices throughout the development lifecycle in Medan."
+    bullets: [
+      "Applying security layer for cloud and on-premise server",
+      "Managing firewall rules for cloud environment",
+      "Managing users with Microsoft Active Directory (AD)"
+    ]
   },
   {
     company: "Murni Teguh Memorial Hospital Medan",
     role: "DevOps Engineer",
     period: "Feb 2025 – Oct 2025 · 9 months",
     status: "past",
-    desc: "Optimized system development processes, deployment pipelines, and infrastructure operations for the hospital group's digital services in Medan."
-  },
-  {
-    company: "Bangkit Academy — Google, Gojek, Tokopedia, Traveloka",
-    role: "Cloud Computing Cohort",
-    period: "Sep 2024 – Jan 2025 · 5 months",
-    status: "past",
-    desc: "",
     bullets: [
-      "Cloud Computing learning path with Google Cloud Platform (GCP)",
-      "Developed soft skills, English proficiency, and technical depth",
-      "Capstone: built a full application with a cross-functional team of ML, Mobile, and Cloud engineers"
+      "Managing Kubernetes cluster for development and production environment",
+      "Optimized continuous integration / continuous deployment (CI/CD) pipelines for the hospital information systems",
+      "Work with leading cloud service provider",
+      "Collaborating with programmer and analyst to deliver performant system"
     ]
   }
 ];
@@ -38,8 +35,23 @@ const workExperienceData = [
    below for a real example of the multi-position accordion in action).
    Add a new institution by pushing an object with a `positions` array. */
 const organizationData = [
+  { 
+    institution: "Bangkit Academy 2024 by Google, Gojek, Tokopedia, Traveloka",
+    period: "Sep 2024 – Jan 2025 · 5 months",
+    positions: [
+      {
+        title: "Cloud Computing Cohort - Distinction Graduate",
+        period: "Sep 2024 – Jan 2025",
+        bullets: [
+        "Intensive Cloud Computing learning path with Google Cloud Platform (GCP)",
+        "Developed soft skills, English proficiency, and technical depth",
+        "Capstone: built a functional application colaborating with a team of Machine Learning, Mobile Development, and Cloud Computing colleagues"
+        ]
+      }
+    ]
+  },
   {
-    institution: "Universitas Pelita Harapan",
+    institution: "Student Organization at Universitas Pelita Harapan",
     period: "Aug 2023 – Aug 2025 · 2 years",
     positions: [
       {
@@ -52,22 +64,31 @@ const organizationData = [
         ]
       },
       {
-        title: "Project Manager — Ambassadors of UPH Medan Campus 2024",
+        title: "Project Manager for Ambassadors of UPH Medan Campus 2024",
         period: "Nov 2023 – Apr 2024 · 6 months",
         bullets: [
+          "An annual event to find suitable students to become the face of UPH Medan Campus",
           "Led the project end-to-end: event organizing, design, and training divisions",
           "Directed a team of 30+ committee members"
         ]
       },
       {
-        title: "Head of Internal Relations Department — Student Association of Information Systems",
+        title: "Student Association of Information Systems Study Program — Head of Internal Relations Department 2023/2024",
         period: "Aug 2023 – Aug 2024",
-        bullets: ["Managed internal events within the UPH Medan Campus"]
+        bullets: [
+          "Managed internal events within the UPH Medan Campus",
+          "Event proposal writing and event management",
+          "Practice collaborating, communicating, and team-working with fellow colleagues"
+        ]
       },
       {
-        title: "Ambassador of UPH Medan Campus 2023",
+        title: "Ambassador of UPH Medan Campus 2023 - Top 12 Finalist",
         period: "Aug 2023 – Aug 2024",
-        bullets: ["Student representative of UPH Medan Campus 2023"]
+        bullets: [
+          "Honored to be the role model for the students in UPH Medan Campus",
+          "Applying UPH's vision and mission into campus life",
+          "Hone soft skills such as public speaking and critical thinking"
+        ]
       }
     ]
   }
@@ -78,28 +99,28 @@ const organizationData = [
    slug:"kubernetes" once Kubernetes is actually one of your skills).
    Full slug list: https://simpleicons.org */
 const techSkillsData = [
-  { name: "Google Cloud (GCP)", slug: "googlecloud" },
-  { name: "Cloud Security" },
+  { name: "Amazon Web Service (AWS)", slug: "AWS" },
+  { name: "Google Cloud Platform (GCP)", slug: "googlecloud" },
+  { name: "Kubernetes", slug: "kubernetes" },
   { name: "Istio", slug: "istio" },
-  { name: "Hyper-V" },
+  { name: "ArgoCD", slug: "argo" },
   { name: "CI/CD" },
-  { name: "Infrastructure" },
-  { name: "Cybersecurity" },
-  { name: "Git", slug: "git" },
-  { name: "GitHub", slug: "github" },
-  { name: "VS Code", slug: "visualstudiocode" },
-  { name: "HTML5", slug: "html5" },
-  { name: "CSS3", slug: "css3" },
-  { name: "Google APIs", slug: "google" },
-  { name: "Prompt Design" },
-  { name: "Vertex AI" }
+  { name: "GitOps", slug: "git" },
+  { name: "YAML", slug: "yaml" },
+  { name: "Terraform", slug: "terraform" },
+  { name: "Linux", slug: "linux" },
+  { name: "Ubuntu", slug: "ubuntu" },
+  { name: "Ansible", slug: "ansible"},
+  { name: "CentOS", name: "centos"},
+  { name: "Database Management"},
+  { name: "Hyper-V" },
 ];
 
 /* Soft / non-technical skills — inferred from your leadership and
    cross-functional experience since your CV doesn't list these explicitly.
    Edit freely so it matches how you'd actually describe yourself. */
 const softSkillsData = [
-  "Leadership", "Team Collaboration", "Public Speaking", "Event Management",
+  "Leadership", "Positivity", "Public Speaking", "Critical Thinking",
   "Cross-functional Collaboration", "Problem Solving", "Communication",
   "Adaptability", "Time Management", "Mentoring & Advising"
 ];
@@ -141,7 +162,7 @@ const projectsData = [
    whenever you have them. */
 const certificationsData = [
   { name: "AWS Certified Solutions Architect - Associate",
-    issuer: "AWS",
+    issuer: "Amazon Web Services Training and Certification",
     icon: "AWS",
     logoUrl: "https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
     issued: "6/16/2026",
@@ -247,7 +268,7 @@ function renderOrganization(){
 }
 
 function simpleIconUrl(slug){
-  return `https://cdn.simpleicons.org/${slug}/86EFAC`;
+  return `https://cdn.simpleicons.org/${slug}`;
 }
 
 function renderSkills(){
