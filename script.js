@@ -114,7 +114,7 @@ const techSkillsData = [
   { name: "CentOS", slug: "centos"},
   { name: "Database Management"},
   { name: "Hyper-V" },
-  { name: "Network" }
+  { name: "Network" } 
 ];
 
 /* Soft / non-technical skills — inferred from your leadership and
