@@ -99,7 +99,7 @@ const organizationData = [
    slug:"kubernetes" once Kubernetes is actually one of your skills).
    Full slug list: https://simpleicons.org */
 const techSkillsData = [
-  { name: "Amazon Web Service (AWS)", slug: "AWS" },
+  { name: "Amazon Web Service (AWS)" },
   { name: "Google Cloud Platform (GCP)", slug: "googlecloud" },
   { name: "Kubernetes", slug: "kubernetes" },
   { name: "Istio", slug: "istio" },
@@ -111,9 +111,10 @@ const techSkillsData = [
   { name: "Linux", slug: "linux" },
   { name: "Ubuntu", slug: "ubuntu" },
   { name: "Ansible", slug: "ansible"},
-  { name: "CentOS", name: "centos"},
+  { name: "CentOS", slug: "centos"},
   { name: "Database Management"},
   { name: "Hyper-V" },
+  { name: "Network" }
 ];
 
 /* Soft / non-technical skills — inferred from your leadership and
@@ -141,14 +142,16 @@ const educationData = {
 const projectsData = [
   {
     title: "Isyara App - Bangkit Academy 2024 Capstone Project",
-    desc: "A full application built end-to-end with a cross-functional team spanning Machine Learning, Mobile Development, and Cloud Computing during Google's Bangkit Academy.",
-    tags: ["GCP", "Team project", "Capstone"]
+    desc: "An application our team developed to help foster better communication between hearing and deaf individuals. The app's main feature is real-time sign language translation using phone's camera—making conversations more accessible and inclusive.",
+    tags: ["GCP", "Cloud", "Team project"],
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7278228121886117888/"
   },
   {
-    title: "Personal Portfolio",
-    desc: "An earlier portfolio built and hosted independently to showcase profile and experience.",
-    tags: ["Web", "Design"],
-    link: "https://verrelangkasa.my.canva.site/"
+    title: "Coming Soon",
+    desc: "Coming Soon.",
+    tags: ["TBA"],
+    link: ""
+
   }
 ];
 
@@ -177,23 +180,23 @@ const certificationsData = [
    ready; "image" takes any image URL. */
 const postsData = [
   {
-    title: "Post title goes here",
-    date: "Month 2026",
-    excerpt: "A short placeholder excerpt describing what this post is about. Replace this with your own summary once the post is ready.",
+    title: "Coming Soon",
+    date: "TBA",
+    excerpt: "Coming Soon",
     link: "#",
     image: null
   },
   {
-    title: "Another placeholder post",
-    date: "Month 2026",
-    excerpt: "This is dummy text standing in for a real excerpt. Keep it to two or three sentences so the card stays tidy.",
+    title: "Coming Soon",
+    date: "TBA",
+    excerpt: "Coming Soon",
     link: "#",
     image: null
   },
   {
-    title: "Third post template",
-    date: "Month 2026",
-    excerpt: "Add your own thoughts, notes, or write-ups here later — this card is just a template for now.",
+    title: "Coming Soon",
+    date: "TBA",
+    excerpt: "Coming Soon",
     link: "#",
     image: null
   }
@@ -330,7 +333,7 @@ function renderProjects(){
       <div class="project-title">${p.title}</div>
       <div class="project-desc">${p.desc}</div>
       <div class="project-tags">${p.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}</div>
-      ${p.link ? `<a class="project-link" href="${p.link}" target="_blank" rel="noopener">View ↗</a>` : ''}
+      ${p.link ? `<a class="project-link" href="${p.link}" target="_blank" rel="noopener">View Project ↗</a>` : ''}
     </div>
   `).join('');
 }
