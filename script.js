@@ -116,7 +116,8 @@ const techSkillsData = [
   { name: "Hyper-V" },
   { name: "Figma", slug: "figma"},
   { name: "Network" },
-  { name: "Bash Script", slug: "gnubash"}
+  { name: "Bash Script", slug: "gnubash"},
+  { name: "UI/UX"}
 ];
 
 /* Soft / non-technical skills — inferred from your leadership and
@@ -208,13 +209,6 @@ const postsData = [
     excerpt: " It was a great experience and a honour to be one of the Ambassadors of UPH. Magnificence✨",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7098166518370242560/",
     image: "assets/post4.jpg"
-  },
-  {
-    title: "Coming Soon",
-    date: "TBA",
-    excerpt: "Coming Soon",
-    link: "#",
-    image: null
   }
 ];
 
