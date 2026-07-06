@@ -99,22 +99,24 @@ const organizationData = [
    slug:"kubernetes" once Kubernetes is actually one of your skills).
    Full slug list: https://simpleicons.org */
 const techSkillsData = [
-  { name: "Amazon Web Service (AWS)" },
-  { name: "Google Cloud Platform (GCP)", slug: "googlecloud" },
-  { name: "Kubernetes", slug: "kubernetes" },
-  { name: "Istio", slug: "istio" },
-  { name: "ArgoCD", slug: "argo" },
+  { name: "Amazon Web Service (AWS)"},
+  { name: "Google Cloud Platform (GCP)", slug: "googlecloud"},
+  { name: "Kubernetes", slug: "kubernetes"},
+  { name: "Istio", slug: "istio"},
+  { name: "ArgoCD", slug: "argo"},
   { name: "CI/CD" },
   { name: "GitOps", slug: "git" },
   { name: "YAML", slug: "yaml" },
   { name: "Terraform", slug: "terraform" },
-  { name: "Linux", slug: "linux" },
   { name: "Ubuntu", slug: "ubuntu" },
   { name: "Ansible", slug: "ansible"},
   { name: "CentOS", slug: "centos"},
   { name: "Database Management"},
+  { name: "Linux", slug: "linux" },
   { name: "Hyper-V" },
-  { name: "Network" } 
+  { name: "Figma", slug: "figma"},
+  { name: "Network" },
+  { name: "Bash Script", slug: "gnubash"}
 ];
 
 /* Soft / non-technical skills — inferred from your leadership and
@@ -180,18 +182,32 @@ const certificationsData = [
    ready; "image" takes any image URL. */
 const postsData = [
   {
-    title: "Coming Soon",
-    date: "TBA",
-    excerpt: "Coming Soon",
-    link: "#",
-    image: null
+    title: "Ignite the Future Leaders",
+    date: "May 2026",
+    excerpt: "It was a privilege to return to my alma mater as a guest speaker for the future student leaders of the Student Association of Information Systems Study Program in Rise Up: Ignite Your Potential Training I.🔥",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7465398808005328897/",
+    image: "assets/post1.JPG"
   },
   {
-    title: "Coming Soon",
-    date: "TBA",
-    excerpt: "Coming Soon",
-    link: "#",
-    image: null
+    title: "Finished My Bachelor's Degree!",
+    date: "November 2025",
+    excerpt: "I have successfully passed my thesis defense on November 14th, 2025, completing my 3.5-years journey as an Information Systems student at Universitas Pelita Harapan Medan Campus.",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7398238066764767232/",
+    image: "assets/post2.jpeg"
+  },
+  {
+    title: "Bangkit Academy 2024 Journey",
+    date: "Jan 2025",
+    excerpt: "After 4 months with 900+ hours committed studied at Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka in Cloud Computing learning path. Finally, I am proudly announce that I graduated this program as one of the 'Distinction' graduates and with flying colors.🏆",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7285999393088970753/",
+    image: "assets/post3.jpg"
+  },
+  {
+    title: "Top 12 Finalist Ambassador of UPH Medan campus 2023",
+    date: "April 2023",
+    excerpt: " It was a great experience and a honour to be one of the Ambassadors of UPH. Magnificence✨",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7098166518370242560/",
+    image: "assets/post4.jpg"
   },
   {
     title: "Coming Soon",
@@ -389,6 +405,53 @@ function renderPosts(){
   `).join('');
 }
 
+/* Carousel controls for the Posts section — arrow buttons scroll by roughly
+   one "page", dots jump to a specific card, and both stay in sync with
+   whatever the person scrolls/swipes to manually. */
+function setupPostsCarousel(){
+  const track = document.getElementById('postsGrid');
+  const prevBtn = document.getElementById('postsPrev');
+  const nextBtn = document.getElementById('postsNext');
+  const dotsEl = document.getElementById('postsDots');
+
+  if(postsData.length === 0){
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+    dotsEl.style.display = 'none';
+    return;
+  }
+
+  dotsEl.innerHTML = postsData.map((_, i) =>
+    `<button class="carousel-dot ${i === 0 ? 'active' : ''}" data-index="${i}" aria-label="Go to post ${i + 1}"></button>`
+  ).join('');
+
+  function scrollToIndex(i){
+    const card = track.children[i];
+    if(card) track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+  }
+
+  function updateActiveState(){
+    const cards = [...track.children];
+    let closest = 0, minDist = Infinity;
+    cards.forEach((card, i) => {
+      const dist = Math.abs(card.offsetLeft - track.scrollLeft);
+      if(dist < minDist){ minDist = dist; closest = i; }
+    });
+    dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === closest));
+    prevBtn.classList.toggle('disabled', track.scrollLeft <= 4);
+    nextBtn.classList.toggle('disabled', track.scrollLeft >= track.scrollWidth - track.clientWidth - 4);
+  }
+
+  dotsEl.querySelectorAll('.carousel-dot').forEach(dot => {
+    dot.addEventListener('click', () => scrollToIndex(Number(dot.dataset.index)));
+  });
+  prevBtn.addEventListener('click', () => track.scrollBy({ left: -track.clientWidth * 0.8, behavior: 'smooth' }));
+  nextBtn.addEventListener('click', () => track.scrollBy({ left: track.clientWidth * 0.8, behavior: 'smooth' }));
+  track.addEventListener('scroll', () => window.requestAnimationFrame(updateActiveState));
+
+  updateActiveState();
+}
+
 function renderContact(){
   const el = document.getElementById('contactList');
   el.innerHTML = contactData.map((c,i) => `
@@ -425,6 +488,7 @@ renderEducation();
 renderProjects();
 renderCertifications();
 renderPosts();
+setupPostsCarousel();
 renderContact();
 
 /* ============================================================
