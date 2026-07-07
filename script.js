@@ -187,28 +187,28 @@ const postsData = [
     date: "May 2026",
     excerpt: "It was a privilege to return to my alma mater as a guest speaker for the future student leaders of the Student Association of Information Systems Study Program in Rise Up: Ignite Your Potential Training I.🔥",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7465398808005328897/",
-    image: "assets/post1.JPG"
+    image: "assets/post4.JPG"
   },
   {
     title: "Finished My Bachelor's Degree!",
     date: "November 2025",
     excerpt: "I have successfully passed my thesis defense on November 14th, 2025, completing my 3.5-years journey as an Information Systems student at Universitas Pelita Harapan Medan Campus.",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7398238066764767232/",
-    image: "assets/post2.jpeg"
+    image: "assets/post3.jpeg"
   },
   {
     title: "Bangkit Academy 2024 Journey",
     date: "Jan 2025",
     excerpt: "After 4 months with 900+ hours committed studied at Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka in Cloud Computing learning path. Finally, I am proudly announce that I graduated this program as one of the 'Distinction' graduates and with flying colors.🏆",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7285999393088970753/",
-    image: "assets/post3.jpg"
+    image: "assets/post2.jpg"
   },
   {
     title: "Top 12 Finalist Ambassador of UPH Medan campus 2023",
     date: "April 2023",
     excerpt: " It was a great experience and a honour to be one of the Ambassadors of UPH. Magnificence✨",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7098166518370242560/",
-    image: "assets/post4.jpg"
+    image: "assets/post1.jpg"
   }
 ];
 
