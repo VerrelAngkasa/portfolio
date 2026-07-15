@@ -134,7 +134,7 @@ const softSkillsData = [
 const educationData = {
   institution: "Universitas Pelita Harapan (UPH)",
   degree: "Bachelor of Computer Science (Information Systems)",
-  period: "August 2022 – November 2025",
+  period: "August 2022 – February 2026",
   gradYear: "2026",
   gpa: "3.69",
   finalProject: "Financial Information System Development and Implementation Based on Workflow Automation for MSMEs Using n8n: A Case Study of Marvin's Chicken Wholesale"
