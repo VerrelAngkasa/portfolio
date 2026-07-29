@@ -183,6 +183,13 @@ const certificationsData = [
    ready; "image" takes any image URL. */
 const postsData = [
   {
+    title: "My First Tech Talk",
+    date: "July 2026",
+    excerpt: "At the AWS Student Community Day 2026, I had the opportunity to share a short Lightning Talk session with the topic 'Choosing the Right Response: CloudWatch Alarm Actions vs Auto Scaling' to deliver the understanding when to trigger automated actions and when to scale resources can make cloud environments more resilient and reliable.",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7484277634638467072/",
+    image: "assets/post5.jpeg"
+  },
+  {
     title: "Ignite the Future Leaders",
     date: "May 2026",
     excerpt: "It was a privilege to return to my alma mater as a guest speaker for the future student leaders of the Student Association of Information Systems Study Program in Rise Up: Ignite Your Potential Training I.🔥",
@@ -204,7 +211,7 @@ const postsData = [
     image: "assets/post2.jpg"
   },
   {
-    title: "Top 12 Finalist Ambassador of UPH Medan campus 2023",
+    title: "Top 12 Finalist Ambassador of UPH Medan Campus 2023",
     date: "April 2023",
     excerpt: " It was a great experience and a honour to be one of the Ambassadors of UPH. Magnificence✨",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7098166518370242560/",
