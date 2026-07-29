@@ -146,7 +146,7 @@ const projectsData = [
   {
     title: "Isyara App - Bangkit Academy 2024 Capstone Project",
     desc: "An application our team developed to help foster better communication between hearing and deaf individuals. The app's main feature is real-time sign language translation using phone's camera—making conversations more accessible and inclusive.",
-    tags: ["GCP", "Cloud", "Team project"],
+    tags: ["GCP", "Cloud", "Backend", "Team Project"],
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7278228121886117888/"
   },
   {
