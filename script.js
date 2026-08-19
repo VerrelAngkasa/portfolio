@@ -8,7 +8,7 @@ const workExperienceData = [
   {
     company: "Murni Teguh Memorial Hospital Medan",
     role: "DevSecOps Engineer",
-    period: "Oct 2025 – Present · 10 months",
+    period: "Oct 2025 – Present · 11 months",
     status: "current",
     bullets: [
       "Applying security layer for cloud and on-premise server",
@@ -221,6 +221,7 @@ const postsData = [
 
 const contactData = [
   { label: "Email", value: "verrelangkasa20@gmail.com", href: "mailto:verrelangkasa20@gmail.com", copyable: true },
+  { label: "GitHub", value: "VerrelAngkasa", href: "https://github.com/VerrelAngkasa"},
   { label: "LinkedIn", value: "Verrel Angkasa", href: "https://www.linkedin.com/in/verrel-angkasa-4b398723b" },
   { label: "Instagram", value: "verrelangkasa", href: "https://www.instagram.com/verrelangkasa/"},
   { label: "Location", value: "Medan, North Sumatra, Indonesia" }
@@ -350,7 +351,7 @@ function renderProjects(){
       <div class="project-title">${p.title}</div>
       <div class="project-desc">${p.desc}</div>
       <div class="project-tags">${p.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}</div>
-      ${p.link ? `<a class="project-link" href="${p.link}" target="_blank" rel="noopener">View Project ↗</a>` : ''}
+      ${p.link ? `<a class="project-link" href="${p.link}" target="_blank" rel="noopener">View Repository ↗</a>` : ''}
     </div>
   `).join('');
 }
