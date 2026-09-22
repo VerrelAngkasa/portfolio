@@ -8,7 +8,7 @@ const workExperienceData = [
   {
     company: "Murni Teguh Memorial Hospital Medan",
     role: "DevSecOps Engineer",
-    period: "Oct 2025 – Present · 11 months",
+    period: "Oct 2025 – Present · 1 year",
     status: "current",
     bullets: [
       "Applying security layer for cloud and on-premise server",
