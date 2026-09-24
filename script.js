@@ -150,11 +150,10 @@ const projectsData = [
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7278228121886117888/"
   },
   {
-    title: "Coming Soon",
-    desc: "Coming Soon.",
-    tags: [ "TBA" ],
-    link: ""
-
+    title: "Secure Serverless Infrastructure-as-Code & CI/CD Automation on AWS",
+    desc: "LedgerGueh, a full-stack web application, and pair it with a production-grade, automated DevSecOps & Serverless Cloud Architecture on AWS.",
+    tags: [ "AWS", "DevSecOps", "Terraform",  "CI/CD" ],
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7508759995115679744/"
   }
 ];
 
@@ -351,7 +350,7 @@ function renderProjects(){
       <div class="project-title">${p.title}</div>
       <div class="project-desc">${p.desc}</div>
       <div class="project-tags">${p.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}</div>
-      ${p.link ? `<a class="project-link" href="${p.link}" target="_blank" rel="noopener">View Repository ↗</a>` : ''}
+      ${p.link ? `<a class="project-link" href="${p.link}" target="_blank" rel="noopener">View Project ↗</a>` : ''}
     </div>
   `).join('');
 }
