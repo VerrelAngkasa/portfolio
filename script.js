@@ -6,10 +6,19 @@
 
 const workExperienceData = [
   {
+    company: "CloudMile",
+    role: "Junior Site Reliability Engineer",
+    period: "Oct 2026 – Present · 1 month",
+    location: "Jakarta",
+    status: "current",
+    bullets: []
+  },
+  {
     company: "Murni Teguh Memorial Hospital Medan",
     role: "DevSecOps Engineer",
     period: "Oct 2025 – Present · 1 year",
-    status: "current",
+    location: "Medan",
+    status: "past",
     bullets: [
       "Applying security layer for cloud and on-premise server",
       "Managing firewall rules for cloud environment",
@@ -20,6 +29,7 @@ const workExperienceData = [
     company: "Murni Teguh Memorial Hospital Medan",
     role: "DevOps Engineer",
     period: "Feb 2025 – Oct 2025 · 9 months",
+    location: "Medan",
     status: "past",
     bullets: [
       "Managing Kubernetes cluster for development and production environment",
@@ -238,6 +248,7 @@ function renderWorkExperience(){
         <span class="timeline-company">${item.company}</span>
         <span class="timeline-period">${item.period}</span>
       </div>
+      <div class="timeline-period">${item.location}</div>
       <div class="timeline-role">${item.role} ${item.status === 'current' ? '<span class="badge">Current</span>' : ''}</div>
       <div class="timeline-desc">
         ${item.desc ? `<p>${item.desc}</p>` : ''}
