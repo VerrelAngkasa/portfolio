@@ -9,7 +9,7 @@ const workExperienceData = [
     company: "CloudMile",
     role: "Junior Site Reliability Engineer",
     period: "Oct 2026 – Present · 1 month",
-    location: "Jakarta",
+    location: "Location: Jakarta",
     status: "current",
     bullets: []
   },
@@ -17,7 +17,7 @@ const workExperienceData = [
     company: "Murni Teguh Memorial Hospital Medan",
     role: "DevSecOps Engineer",
     period: "Oct 2025 – Present · 1 year",
-    location: "Medan",
+    location: "Location: Medan",
     status: "past",
     bullets: [
       "Applying security layer for cloud and on-premise server",
@@ -29,7 +29,7 @@ const workExperienceData = [
     company: "Murni Teguh Memorial Hospital Medan",
     role: "DevOps Engineer",
     period: "Feb 2025 – Oct 2025 · 9 months",
-    location: "Medan",
+    location: "Location: Medan",
     status: "past",
     bullets: [
       "Managing Kubernetes cluster for development and production environment",
