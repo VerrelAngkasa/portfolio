@@ -9,7 +9,7 @@ const workExperienceData = [
     company: "CloudMile",
     role: "Junior Site Reliability Engineer",
     period: "Oct 2026 – Present · 1 month",
-    location: "Location: Jakarta",
+    location: "Location: South Jakarta",
     status: "current",
     bullets: []
   },
@@ -17,7 +17,7 @@ const workExperienceData = [
     company: "Murni Teguh Memorial Hospital Medan",
     role: "DevSecOps Engineer",
     period: "Oct 2025 – Present · 1 year",
-    location: "Location: Medan",
+    location: "Location: Greater Medan",
     status: "past",
     bullets: [
       "Applying security layer for cloud and on-premise server",
@@ -29,7 +29,7 @@ const workExperienceData = [
     company: "Murni Teguh Memorial Hospital Medan",
     role: "DevOps Engineer",
     period: "Feb 2025 – Oct 2025 · 9 months",
-    location: "Location: Medan",
+    location: "Location: Greater Medan",
     status: "past",
     bullets: [
       "Managing Kubernetes cluster for development and production environment",
@@ -232,8 +232,8 @@ const contactData = [
   { label: "Email", value: "verrelangkasa20@gmail.com", href: "mailto:verrelangkasa20@gmail.com", copyable: true },
   { label: "GitHub", value: "VerrelAngkasa", href: "https://github.com/VerrelAngkasa"},
   { label: "LinkedIn", value: "Verrel Angkasa", href: "https://www.linkedin.com/in/verrel-angkasa-4b398723b" },
-  { label: "Instagram", value: "verrelangkasa", href: "https://www.instagram.com/verrelangkasa/"},
-  { label: "Location", value: "Medan, North Sumatra, Indonesia" }
+  { label: "Instagram", value: "@verrelangkasa", href: "https://www.instagram.com/verrelangkasa/"},
+  { label: "Location", value: "West Jakarta, Jakarta, Indonesia" }
 ];
 
 /* ============================================================
